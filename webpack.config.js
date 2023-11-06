@@ -32,6 +32,11 @@ module.exports = {
         modules: ["./node_modules"],
         extensions: [".js", ".json", ".jsx", ".css"],
     },
+    resolve: {
+        alias: {
+            '@logger': path.resolve(__dirname, "./src/logger.js"),
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin(),
     ],

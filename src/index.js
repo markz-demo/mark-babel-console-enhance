@@ -1,3 +1,5 @@
+import { test1 } from './index2';
+
 (function () {
 
     const btn1 = document.createElement('button');
@@ -7,11 +9,13 @@
         console.log(123);
         console.warn('abc');
         console.log(123, 'abc', true, [1, 2, 3], { key: 'value' });
+
+        test1();
     }
 
 })();
 
-window.my_console = function (method, location, ...args) {
-    const prefix = `[${new Date().toLocaleString()}] [${location}]`;
-    console[method](prefix, ...args);
-}
+// window.my_console = function (method, location, ...args) {
+//     const prefix = `[${new Date().toLocaleString()}] [${location}]`;
+//     console[method](prefix, ...args);
+// }
